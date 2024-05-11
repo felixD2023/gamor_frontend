@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import Button from "../../../../components/button/Button";
 import Background from "./Background";
 import {
@@ -9,11 +8,6 @@ import {
 } from "./StyledComponents";
 
 const LeftSection = () => {
-  const navigate = useNavigate();
-
-  const singIn = () => {
-    navigate("/login")
-  };
 
   return (
     <LeftSectionStyled>
@@ -40,7 +34,7 @@ const LeftSection = () => {
 
       <div style={{width:"70%",display: "flex", justifyContent:"space-evenly", alignItems:"center", zIndex:3}}>
         <Button text="Create account" color="white" variant="rounded"/>
-        <Button onClick={()=>singIn()} text="Sing in" variant="text" />
+        <Button text="Sing in" variant="text" />
       </div>
 
     </LeftSectionStyled>

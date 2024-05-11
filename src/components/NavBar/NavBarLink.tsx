@@ -14,6 +14,7 @@ interface NavBarLinkProps {
 const NavBarLink = (props: NavBarLinkProps) => {
   return (
     <NavLink
+    
       to={props.to}
       style={{
         textDecoration: "None",
