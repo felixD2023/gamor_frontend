@@ -11,10 +11,10 @@ const NavBar = () => {
     <>
       <NavBarStyled>
         <div style={{ display: "flex" }}>
-          <NavBarLink to="/" name="Home" />
-          <NavBarLink to="/stream" name="Stream" />
-          <NavBarLink to="/party" name="Party" />
-          <NavBarLink to="/premium" name="Premium" />
+          <NavBarLink to="home" name="Home" />
+          <NavBarLink to="stream" name="Stream" />
+          <NavBarLink to="party" name="Party" />
+          <NavBarLink to="premium" name="Premium" />
         </div>
         <Logo>Gamor</Logo>
         <div style={{ display: "flex", alignItems: "center" }}>

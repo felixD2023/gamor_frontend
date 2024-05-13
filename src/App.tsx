@@ -8,8 +8,7 @@ import Themes from "./themes/Theme";
 //redux
 import { useSelector } from "react-redux";
 import { RootState } from "./Redux/store.ts";
-import HomePage from "./pages/HomePage/HomePage.tsx";
-import { Route, Routes } from "react-router-dom";
+import { Outlet} from "react-router-dom";
 
 const AppStyled = styled.div`
   background-color: ${({ theme }) => theme.background1};
@@ -24,21 +23,10 @@ const App = () => {
   const theme = useSelector((state: RootState) => state.theme.mode)
 
   return (
-
     <ThemeProvider theme={theme === "light" ? Themes.light : Themes.dark}>
       <AppStyled>
         <NavBar />
-        <Routes>
-          <Route path="/" element={<HomePage />}/>
-            
-          <Route path="party/" element={<HomePage />}/>
-            
-          <Route path="premium/" element={<HomePage />}/>
-            
-          <Route path="stream/" element={<HomePage />}/>
-          <Route path="/*" element={<HomePage />}/>
-
-        </Routes>
+        <Outlet/>
       </AppStyled>
     </ThemeProvider>
   );
